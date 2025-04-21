@@ -1,0 +1,81 @@
+/* [project]/app/styles/cat.css [app-client] (css) */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #00f;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 300px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input {
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.imageSection {
+  flex: 1;
+  text-align: center;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #333;
+  border-radius: 10px;
+}
+
+.attributesSection {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.attributeRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  background-color: #fd0;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.button:hover {
+  transform: scale(1.2);
+}
+
+.attributeText {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/*# sourceMappingURL=app_styles_cat_00db7c.css.map*/

@@ -1,7 +1,7 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  pageExtensions: ['tsx', 'ts'], // Ensures Next.js recognizes .tsx and .ts files for routing
 };
 
 export default nextConfig;
