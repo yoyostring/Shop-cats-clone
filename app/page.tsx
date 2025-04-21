@@ -3,7 +3,6 @@ import HighlightButton from "./components/HighlightButton";
 import Image from "next/image";
 import Cat1 from "../public/cute cat.jpeg";
 import "./styles/globals.css";
-import Button from "./components/Button";
 
 export default function Home() {
   return (
