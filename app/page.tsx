@@ -2,6 +2,12 @@
 import HighlightButton from "./components/HighlightButton";
 import Image from "next/image";
 import Cat1 from "../public/cute cat.jpeg";
+import YoutubeIcon from "../public/youtube.jpeg";
+import TiktokIcon from "../public/tiktok logo.jpg";
+import InstagramIcon from "../public/instagram logo.jpeg";
+// import DeliItem1 from "../public/deli-item-1.jpg";
+// import DeliItem2 from "../public/deli-item-2.jpg";
+// import DeliItem3 from "../public/deli-item-3.jpg";
 import "./styles/globals.css";
 
 export default function Home() {
@@ -83,12 +89,74 @@ export default function Home() {
 
         {/* Nomination text */}
         <div className="nominate-content">
-          <h1 className="sub1">NOMINATE</h1>
-          <h2 className="sub2">A SHOP CAT TO BE ON OUR SHOW!</h2>
+          <div className="nominate-title">
+            <h1 className="sub1">NOMINATE</h1>
+          </div>
+          <div className="nominate-subtitle">
+            <h1 className="sub2">A SHOP CAT TO BE ON OUR SHOW!</h1>
+          </div>
           <HighlightButton
             text="NOMINATE"
             customStyle={{ marginTop: "20px" }}
             onClick={() => (window.location.href = "/subpages")}
+          />
+        </div>
+      </div>
+
+      {/* Add bottom marquee */}
+      <div className="bottom-marquee">
+        <div className="marquee-text">
+          ★ COLD CUTS ★ BEER ★ LOTTO ★ CIGARETTES ★ COLD CUTS ★ BEER ★ LOTTO ★
+          CIGARETTES ★ COLD CUTS ★ BEER ★ LOTTO ★ CIGARETTES ★ COLD CUTS ★ BEER
+          ★ LOTTO ★ CIGARETTES ★ COLD CUTS ★ BEER ★ LOTTO ★ CIGARETTES ★ COLD
+          CUTS ★ BEER ★ LOTTO ★ CIGARETTES ★ COLD CUTS ★ BEER ★ LOTTO ★
+          CIGARETTES ★ COLD CUTS ★ BEER ★ LOTTO ★ CIGARETTES ★ COLD CUTS ★ BEER
+          ★ LOTTO ★ CIGARETTES ★ COLD CUTS ★ BEER ★ LOTTO ★ CIGARETTES ★
+        </div>
+      </div>
+
+      {/* Add this right before your deli menu section */}
+      <h1 className="deli-menu-header">DELI MENU</h1>
+
+      {/* Add Deli Menu Section */}
+      <div className="deli-menu">
+        <div className="menu-item">
+          <div className="title-price-container">
+            <div className="item-title">JUICY HAT</div>
+            <span className="price-tag">$24.99</span>
+          </div>
+          <Image
+            src={Cat1}
+            alt="Juicy Hat"
+            width={70}
+            height={70}
+            style={{ height: "auto" }} // Maintain aspect ratio
+          />
+        </div>
+        <div className="menu-item">
+          <div className="title-price-container">
+            <div className="item-title">CATNIP TOY</div>
+            <span className="price-tag">$24.99</span>
+          </div>
+          <Image
+            src={Cat1}
+            alt="Catnip Toy"
+            width={70}
+            height={70}
+            style={{ height: "auto" }}
+          />
+        </div>
+        <div className="menu-item">
+          <div className="title-price-container">
+            <div className="item-title">CAT BANDANA</div>
+            <span className="price-tag">$24.99</span>
+          </div>
+          <Image
+            src={Cat1}
+            alt="Cat Bandana"
+            width={70}
+            height={70}
+            style={{ height: "auto" }}
           />
         </div>
       </div>
@@ -99,18 +167,31 @@ export default function Home() {
           <h2>WATCH</h2>
           <div className="social-icons">
             <a href="https://youtube.com">
-              <img
-                src="youtube.jpeg"
-                alt="Button Image"
+              <Image
+                src={YoutubeIcon}
+                alt="YouTube"
+                width={32}
+                height={32}
                 className="hover-button"
-              ></img>
+              />
             </a>
             <a href="https://tiktok.com">
-              <img src="tiktok logo.jpg" className="hover-button"></img>
+              <Image
+                src={TiktokIcon}
+                alt="TikTok"
+                width={32}
+                height={32}
+                className="hover-button"
+              />
             </a>
-
             <a href="https://instagram.com">
-              <img src="instagram logo.jpeg" className="hover-button"></img>
+              <Image
+                src={InstagramIcon}
+                alt="Instagram"
+                width={32}
+                height={32}
+                className="hover-button"
+              />
             </a>
           </div>
         </div>

@@ -10,10 +10,11 @@ function HighlightButton({ text = "NOMINATE", customStyle = {}, onClick = () => 
   const handleMouseOut = () => setIsHighlighted(false);
 
   const baseStyle = {
-    backgroundColor: isHighlighted ? "yellow" : "lightgreen",
-    color: isHighlighted ? "red" : "blue",
+    backgroundColor: isHighlighted ? "yellow" : "blue",
+    color: isHighlighted ? "red" : "#00e42f",
     padding: "10px 20px",
     fontSize: "16px",
+    fontWeight: "bold",
     cursor: "pointer",
     border: "none",
     borderRadius: "5px",

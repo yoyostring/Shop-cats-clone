@@ -1,5 +1,5 @@
 body{
-  background-color: pink;
+  background-color: #ffc5e5;
 }
 
 .kitty-form {
@@ -33,7 +33,7 @@ body{
 
 
 .kitty-page {
-  background-color: pink;
+  background-color: #ffc5e5;
   height: 100vh;
   padding: 40px;
   font-family: 'Arial', sans-serif;
@@ -46,8 +46,8 @@ body{
 /* Top-left corner button */
 .kitty-page a {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: -10px;
+  left: 40px;
 }
 
 /* Big fun title */
@@ -55,7 +55,7 @@ body{
   font-size: 48px;
   font-weight: bold;
   color: yellow;
-  text-shadow: 2px 2px red;
+  text-shadow: -2px 2px red;
   margin-top: 20px;
 }
 
@@ -117,23 +117,61 @@ body{
 .attributes-section {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   min-width: 250px;
-  color: royalblue;
-  font-weight: bold;
   margin-top: 100px;
-
+  align-items: center;
 }
 
-/* Arrows could be buttons styled like this */
+.attribute-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.attribute-label {
+  color: #0000FF;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.attribute-text {
+  color: #FF0000;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.attribute-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  gap: 20px;
+}
+
 .attributes-section button {
-  margin-top: 15px;
   background-color: yellow;
   border: none;
   border-radius: 30%;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
   font-size: 18px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
 /* Submit at bottom */
@@ -142,11 +180,98 @@ body{
   padding: 20px 60px;
   font-size: 24px;
   background: linear-gradient(to right, blue, royalblue);
-  color: limegreen;
+  color: #00e42f;
   font-weight: bold;
   border: none;
   border-radius: 999px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: yellow;
+  color: red;
+}
+
+/* Add these media queries at the bottom of your cat.css file */
+
+@media screen and (max-width: 768px) {
+  .kitty-page {
+    padding: 20px;
+    height: auto; /* Allow page to grow with content */
+  }
+
+  .main-content {
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    gap: 40px; /* Reduce gap between sections */
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .form-section {
+    gap: 20px; /* Reduce gap between form fields */
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .image-section {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .image-section img {
+    width: 200px; /* Slightly smaller image for mobile */
+    height: 200px;
+  }
+
+  .attributes-section {
+    margin-top: 20px;
+    align-items: center; /* Center the rows on mobile */
+  }
+
+  .title {
+    font-size: 36px; /* Smaller title for mobile */
+    text-align: center;
+    margin-top: 40px; /* Give space for the back button */
+  }
+
+  .submit-button {
+    width: 100%; /* Full width button */
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 20px;
+  }
+
+  .kitty-form {
+    width: 100%;
+  }
+
+  .form-field input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Additional adjustments for very small devices */
+@media screen and (max-width: 480px) {
+  .kitty-page {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .image-section img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .submit-button {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
 }
 
 

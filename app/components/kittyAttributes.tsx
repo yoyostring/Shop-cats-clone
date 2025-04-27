@@ -32,47 +32,63 @@ const KittyAttributes: React.FC<KittyAttributesProps> = ({
   };
 
   return (
-    <div style={{ flex: 1, textAlign: "center" }}>
-      <div>
-        <button
-          onClick={() => handleChange(setChonkLevel, -1, chonkLevels.length)}
-        >
-          ◀
-        </button>
-        <span>{chonkLevels[chonkLevel]}</span>
-        <button
-          onClick={() => handleChange(setChonkLevel, 1, chonkLevels.length)}
-        >
-          ▶
-        </button>
+    <div className="attributes-section">
+      {/* Chonk Level */}
+      <div className="attribute-group">
+        <div className="attribute-label">CHONK LEVEL</div>
+        <div className="attribute-row">
+          <button
+            onClick={() => handleChange(setChonkLevel, -1, chonkLevels.length)}
+          >
+            ◀
+          </button>
+          <span className="attribute-text">{chonkLevels[chonkLevel]}</span>
+          <button
+            onClick={() => handleChange(setChonkLevel, 1, chonkLevels.length)}
+          >
+            ▶
+          </button>
+        </div>
       </div>
-      <div>
-        <button
-          onClick={() => handleChange(setHairLength, -1, hairLengths.length)}
-        >
-          ◀
-        </button>
-        <span>{hairLengths[hairLength]}</span>
-        <button
-          onClick={() => handleChange(setHairLength, 1, hairLengths.length)}
-        >
-          ▶
-        </button>
+
+      {/* Hair Length */}
+      <div className="attribute-group">
+        <div className="attribute-label">HAIR LENGTH</div>
+        <div className="attribute-row">
+          <button
+            onClick={() => handleChange(setHairLength, -1, hairLengths.length)}
+          >
+            ◀
+          </button>
+          <span className="attribute-text">{hairLengths[hairLength]}</span>
+          <button
+            onClick={() => handleChange(setHairLength, 1, hairLengths.length)}
+          >
+            ▶
+          </button>
+        </div>
       </div>
-      <div>
-        <button
-          onClick={() =>
-            handleChange(setColorPattern, -1, colorPatterns.length)
-          }
-        >
-          ◀
-        </button>
-        <span>{colorPatterns[colorPattern]}</span>
-        <button
-          onClick={() => handleChange(setColorPattern, 1, colorPatterns.length)}
-        >
-          ▶
-        </button>
+
+      {/* Color Pattern */}
+      <div className="attribute-group">
+        <div className="attribute-label">COLOR/PATTERN</div>
+        <div className="attribute-row">
+          <button
+            onClick={() =>
+              handleChange(setColorPattern, -1, colorPatterns.length)
+            }
+          >
+            ◀
+          </button>
+          <span className="attribute-text">{colorPatterns[colorPattern]}</span>
+          <button
+            onClick={() =>
+              handleChange(setColorPattern, 1, colorPatterns.length)
+            }
+          >
+            ▶
+          </button>
+        </div>
       </div>
     </div>
   );

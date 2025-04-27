@@ -1,16 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: pink;
+  background-color: #ffc5e5; /* Lighter pink to match the site */
+  font-family: 'Montserrat', sans-serif;
 }
 
-* {
-  box-sizing: border-box;
+.deli-menu {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 40px 0;
 }
 
+.menu-item {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title-price-container {
+  position: relative;
+  margin-bottom: 10px;
+  height: 40px; /* Give space for the overlapping elements */
+}
+
+.item-title {
+  color: #0000FF;
+  font-weight: bold;
+  font-size: 24px;
+  position: relative;
+  z-index: 2; /* Keep text on top */
+}
+
+.price-tag {
+  position: absolute;
+  top: -10px;
+  right: -60px;
+  background: #00FF00;
+  color: black;
+  padding: 15px;
+  border-radius: 50%;
+  font-weight: bold;
+  z-index: 1; /* Keep price bubble behind */
+  margin:20px
+}
+
+
+.menu-image {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+  display: block;
+}
 
 .container {
   min-height: 100vh;
@@ -28,16 +76,16 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
-  gap: 20px;
+  gap: 10px;
 }
 
 .main-title {
   font-size: 72px;
   font-family: 'Lobster', cursive;
   color: yellow;
-  text-shadow: 3px 3px red;
+  text-shadow: -3px 3px red;
   line-height: 1;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   z-index: 1;
 }
 
@@ -56,15 +104,18 @@ body {
 }
 
 
-.sub1,
-.sub2 {
-  font-size: 20px;
-  color: navy;
+.sub2{
+  color: #1f5de8;
+  font-size: 30px;
   font-weight: bold;
-  gap: 200px;
+  letter-spacing: 0px;
 }
 
-
+.sub1{
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
 
 
 .hover-button { 
@@ -88,22 +139,30 @@ body {
 .cat-circle-wrapper {
   position: relative;
   width: 600px;
-  height: 600px;
-  margin: 20px auto;
+  height: 500px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .nominate-content {
   z-index: 1;
   text-align: center;
+  margin-top: -50px;
+
 }
 
 .cat {
   position: absolute;
   z-index: 0;
-  pointer-events: none;
+  transition: 0.3s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.cat:hover{
+  transform: rotate(10deg);
 }
 
 /* Specific cat positions */
@@ -135,8 +194,7 @@ body {
 
 .cat.bottom-center {
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 42%;
 }
 
 .footer-bar {
@@ -144,7 +202,7 @@ body {
   justify-content: space-between;
   align-items: stretch;
   width: 100%;
-  font-family: 'Lobster', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 28px;
   margin: 0;
@@ -156,7 +214,7 @@ body {
 
 .footer-left {
   flex: 1;
-  background: yellow;
+  background: #faf129;
   color: hotpink;
   display: flex;
   flex-direction: column;
@@ -169,15 +227,16 @@ body {
 .footer-right {
   flex: 1;
   background: royalblue;
-  color: yellow;
+  color: #faf129;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
   padding-bottom: 0;
-  min-height: 162px;
+  min-height: 162px;  
 }
+
 
 .footer-left,
 .footer-right{
@@ -202,7 +261,7 @@ body {
 
 .contact-link {
   margin-top: 10px;
-  color: white;
+  color: #faf129;
   font-size: 18px;
   text-decoration: none;
 }
@@ -210,33 +269,56 @@ body {
 
 .marquee-bar {
   width: 100%;
-  background-color: red;
-  color: yellow;
+  background-color: #ff485f;; 
+  border-color: #ff485f;
+  color: #fbcf36; 
   overflow: hidden;
   white-space: nowrap;
   padding: 10px 0;
   font-weight: bold;
   font-size: 18px;
   font-family: Arial, sans-serif;
-  border-top: 3px solid gold;
-  border-bottom: 3px solid gold;
+  font-style: italic;
   margin-top: 100px;
+  margin-bottom: 30px;
+
 }
+
+
+
 
 .footer-marquee-text,
 .marquee-text {
-  display: inline-block;
-  animation: scroll-left 50s linear infinite;
+  display: flex;
+  width: fit fit-content;
+  animation: scroll-left 20s linear infinite;
 }
+
+
+
+.bottom-marquee {
+  width: 100%;
+  background-color: #ff485f; /* Gold background */
+  color: #fbcf36;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  margin: 30px;
+}
+
 
 @keyframes scroll-left {
 
-  100% { transform: translateX(-100%); }
+  100% { transform: translateX(-50%); }
 }
 
 
 footer {
-  background: greenyellow;
+  background: #09ce33; 
+  color: blue;
   width: 100%;
   font-size: 18px;
   text-align: center;
@@ -247,4 +329,172 @@ footer {
   padding: 0;
   border-top: none;
   border-bottom: none;
+}
+
+.nominate-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: -2px 2px 0 #0000FF;
+  letter-spacing: 8px; /* Increased letter spacing to match the wide style */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.nominate-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #0000FF;
+  letter-spacing: 4px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.deli-menu-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
+  text-shadow: -3px 3px #0000FF; /* Only bottom shadow */
+  letter-spacing: 6px;
+  margin: 40px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Add responsive styles */
+@media screen and (max-width: 768px) {
+  /* Header adjustments */
+  .main-title {
+    font-size: 48px; /* Smaller font size for mobile */
+  }
+
+  .header-sticker {
+    font-size: 12px;
+    margin-top: -100px;
+    margin-left: 150px;
+  }
+
+  /* Nominate section */
+  .nominate-title {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+
+  .nominate-subtitle {
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding: 0 20px;
+  }
+
+  /* Deli menu section */
+  .deli-menu-header {
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+
+  .deli-menu {
+    flex-direction: column; /* Stack items vertically on mobile */
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .menu-item {
+    width: 100%;
+  }
+
+  .item-title {
+    font-size: 20px;
+  }
+
+  .price-tag {
+    padding: 10px;
+    right: -10px;
+  }
+
+  .menu-image {
+    width: 150px; /* Smaller images on mobile */
+    margin: 0 auto; /* Center images */
+  }
+
+  /* Cat circle adjustments */
+  .cat-circle-wrapper {
+    width: 100%;
+    height: 400px;
+    padding: 0 20px;
+  }
+
+  .cat {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  /* Footer adjustments */
+  .footer-bar {
+    flex-direction: column; /* Stack footer sections */
+  }
+
+  .footer-left, 
+  .footer-right {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+
+  /* Marquee adjustments */
+  .marquee-bar,
+  .bottom-marquee {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}
+
+/* Additional breakpoint for very small devices */
+@media screen and (max-width: 480px) {
+  .main-title {
+    font-size: 36px;
+  }
+
+  .nominate-title {
+    font-size: 32px;
+  }
+
+  .nominate-subtitle {
+    font-size: 20px;
+  }
+
+  .deli-menu-header {
+    font-size: 32px;
+  }
+
+  .menu-image {
+    width: 120px;
+  }
+
+  .cat {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+/* Fix for marquee on mobile */
+@media screen and (max-width: 768px) {
+  .marquee-content {
+    animation: scroll-left 15s linear infinite; /* Faster scroll on mobile */
+  }
+
+  .footer-marquee-text {
+    font-size: 12px;
+  }
+}
+
+/* Add smooth transitions for responsive changes */
+* {
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
 }
