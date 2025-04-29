@@ -9,6 +9,7 @@ import InstagramIcon from "../public/instagram logo.jpeg";
 // import DeliItem2 from "../public/deli-item-2.jpg";
 // import DeliItem3 from "../public/deli-item-3.jpg";
 import "./styles/globals.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -166,33 +167,48 @@ export default function Home() {
         <div className="footer-left">
           <h2>WATCH</h2>
           <div className="social-icons">
-            <a href="https://youtube.com">
+            <Link
+              href="https://www.youtube.com/@madrealities1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src={YoutubeIcon}
                 alt="YouTube"
                 width={32}
                 height={32}
                 className="hover-button"
+                priority
               />
-            </a>
-            <a href="https://tiktok.com">
+            </Link>
+            <Link
+              href="https://www.tiktok.com/@shopcatsshow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src={TiktokIcon}
                 alt="TikTok"
                 width={32}
                 height={32}
                 className="hover-button"
+                priority
               />
-            </a>
-            <a href="https://instagram.com">
+            </Link>
+            <Link
+              href="https://www.instagram.com/shopcatsshow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src={InstagramIcon}
                 alt="Instagram"
                 width={32}
                 height={32}
                 className="hover-button"
+                priority
               />
-            </a>
+            </Link>
           </div>
         </div>
 

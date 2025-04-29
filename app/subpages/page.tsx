@@ -9,6 +9,7 @@ import { imageMap } from "../components/imageMap";
 import HighlightButton from "../components/HighlightButton";
 import Link from "next/link";
 import "../styles/cat.css";
+import Image from "next/image";
 
 const chonkLevels = ["Slim Jim", "Medium", "Chonky"];
 const hairLengths = ["Short", "Medium", "Long"];
@@ -36,7 +37,12 @@ const KittyMaker: React.FC = () => {
   return (
     <div className="kitty-page">
       <Link href="/">
-        <HighlightButton text="Shop Cats" />
+        <Image
+          src="/shop-cats-logo.png"
+          width={100}
+          height={70}
+          alt="Shop Cats Logo"
+        />
       </Link>
 
       <h1 className="title">Nominate a Shop Cat</h1>
