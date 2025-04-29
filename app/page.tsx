@@ -178,7 +178,6 @@ export default function Home() {
                 width={32}
                 height={32}
                 className="hover-button"
-                priority
               />
             </Link>
             <Link
@@ -192,7 +191,6 @@ export default function Home() {
                 width={32}
                 height={32}
                 className="hover-button"
-                priority
               />
             </Link>
             <Link
@@ -206,7 +204,6 @@ export default function Home() {
                 width={32}
                 height={32}
                 className="hover-button"
-                priority
               />
             </Link>
           </div>

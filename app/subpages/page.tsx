@@ -6,7 +6,7 @@ import KittyImage from "../components/kittyImage";
 import KittyAttributes from "../components/kittyAttributes";
 import { useKittyState } from "../components/useKittyState";
 import { imageMap } from "../components/imageMap";
-import HighlightButton from "../components/HighlightButton";
+// import HighlightButton from "../components/HighlightButton";
 import Link from "next/link";
 import "../styles/cat.css";
 import Image from "next/image";
